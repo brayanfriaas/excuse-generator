@@ -1,11 +1,21 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+window.onload = () => {
+  let who = [" The dog ", " My granma ", " his turtle", " my bird "];
+  let action = [" eat ", " pissed ", " crushed ", " broked "];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    " before the class ",
+    " right on time ",
+    " when I finished ",
+    " during my lunch ",
+    " while I was praying "
+  ];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  let randomExcuseWho = who[Math.floor(who.length * Math.random())];
+  let randomExcuseAction = action[Math.floor(action.length * Math.random())];
+  let randomExcuseWhat = what[Math.floor(what.length * Math.random())];
+  let randomExcuseWhen = when[Math.floor(when.length * Math.random())];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let ExcuseFinal =
+    randomExcuseWho + randomExcuseAction + randomExcuseWhat + randomExcuseWhen;
+  document.getElementById("excuse").innerHTML = ExcuseFinal;
 };
